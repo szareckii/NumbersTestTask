@@ -1,5 +1,6 @@
 package com.zareckii.numberstesttask.numbers.presentation
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,11 @@ import com.zareckii.numberstesttask.main.presentation.ShowFragment
 class NumbersFragment : Fragment() {
 
     private var showFragment: ShowFragment = ShowFragment.Empty()
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        showFragment = context as ShowFragment
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

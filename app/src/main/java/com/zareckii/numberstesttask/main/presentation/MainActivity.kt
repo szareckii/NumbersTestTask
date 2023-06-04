@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), ShowFragment {
             transaction.add(container, fragment)
                 .addToBackStack(fragment.javaClass.simpleName)
         else
-            transaction.replace(R.id.container, NumbersFragment())
+            transaction.replace(container, NumbersFragment())
         transaction.commit()
     }
 }
